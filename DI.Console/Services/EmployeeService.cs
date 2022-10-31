@@ -1,56 +1,17 @@
 ﻿using DI.Console.Abstractions;
-using DI.Console.Models;
+using DI.Console.Models.Data;
 
 namespace DI.Console.Services
 {
     public class EmployeeService : IEmployeeService
     {
-        private readonly List<Employee> data = new List<Employee>()
-        {
-            new Employee()
-            {
-                Id = 1,
-                FullName = "Carl Jonson",
-                Position = "Junior Backend dev",
-                Experience = 0.5,
-                Salary = 500,
-                Department = "IT"
-            },
-            new Employee()
-            {
-                Id = 2,
-                FullName = "Rider",
-                Position = "Middle Backend dev",
-                Experience = 1.5,
-                Salary = 1500,
-                Department = "IT"
-            },
-            new Employee()
-            {
-                Id = 3,
-                FullName = "Sweet",
-                Position = "UX/UI designer",
-                Experience = 2,
-                Salary = 2000,
-                Department = "Design"
-            },
-            new Employee()
-            {
-                Id = 4,
-                FullName = "Big Smoke",
-                Position = "SysAdminsitartor",
-                Experience = 3.5,
-                Salary = 3500,
-                Department = "DevOps"
-            },
-
-        };
-        
         public void PrintEmployeeList(int page = 1, int pageSize = 10)
         {
-            //TODO: Реализовать по страничный вывод
-            
-            System.Console.WriteLine("EmployeeService");
+            //TODO: постраничный вывод
+            foreach (var emp in DataProvider.employees)
+            {
+                System.Console.WriteLine(emp.ToString());
+            }
         }
     }
 }

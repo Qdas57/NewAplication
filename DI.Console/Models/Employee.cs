@@ -11,7 +11,12 @@
         public double Experience { get; set; }
 
         public double Salary { get; set; }
-        
-        public string Department { get; set; }
+
+        public int DepartmentId { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id:{Id} FullName: {FullName}\t\t Position: {Position}\t Salary: {Salary}";
+        }
     }
 }
