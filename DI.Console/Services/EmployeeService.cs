@@ -13,7 +13,8 @@ namespace DI.Console.Services
                 FullName = "Carl Jonson",
                 Position = "Junior Backend dev",
                 Experience = 0.5,
-                Salary = 500
+                Salary = 500,
+                Department = "IT"
             },
             new Employee()
             {
@@ -21,7 +22,8 @@ namespace DI.Console.Services
                 FullName = "Rider",
                 Position = "Middle Backend dev",
                 Experience = 1.5,
-                Salary = 1500
+                Salary = 1500,
+                Department = "IT"
             },
             new Employee()
             {
@@ -29,7 +31,8 @@ namespace DI.Console.Services
                 FullName = "Sweet",
                 Position = "UX/UI designer",
                 Experience = 2,
-                Salary = 2000
+                Salary = 2000,
+                Department = "Design"
             },
             new Employee()
             {
@@ -37,7 +40,8 @@ namespace DI.Console.Services
                 FullName = "Big Smoke",
                 Position = "SysAdminsitartor",
                 Experience = 3.5,
-                Salary = 3500
+                Salary = 3500,
+                Department = "DevOps"
             },
 
         };
@@ -45,6 +49,7 @@ namespace DI.Console.Services
         public void PrintEmployeeList(int page = 1, int pageSize = 10)
         {
             //TODO: Реализовать по страничный вывод
+            
             System.Console.WriteLine("EmployeeService");
         }
     }

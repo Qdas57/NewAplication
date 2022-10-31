@@ -11,5 +11,7 @@
         public double Experience { get; set; }
 
         public double Salary { get; set; }
+        
+        public string Department { get; set; }
     }
 }
