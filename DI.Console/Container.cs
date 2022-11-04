@@ -4,16 +4,19 @@
     {
         // IOC контейнер
         private static readonly Dictionary<Type, Type> _container = new Dictionary<Type, Type>();
+        
         // Регистрация типов
         public static void Register<TFrom, TTo>()
         {
             _container.Add(typeof(TFrom), typeof(TTo));
         }
+        
         // Резолвинг типов
         public static TFrom Resolve<TFrom>()
         {
             return (TFrom)Resolve(typeof(TFrom));
         }
+        
         // Резолвинг типов
         private static object Resolve(Type type)
         {

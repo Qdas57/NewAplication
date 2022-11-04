@@ -8,7 +8,7 @@ namespace DI.Console.Services
 
         public void PrintEmployeeList(int page = 1, int pageSize = 10)
         {
-            System.Console.WriteLine(SecondEmployeeService);
+            System.Console.WriteLine("s");
             
         }
         
