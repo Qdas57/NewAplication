@@ -7,11 +7,17 @@ namespace DI.Console.Services
     {
         public void PrintEmployeeList(int page = 1, int pageSize = 10)
         {
-            //TODO: постраничный вывод
+            //TODO: постраничный вывод 
+            foreach (var employee in DataProvider.employees)
+            {
+                System.Console.WriteLine(employee);
+            }
+
             foreach (var emp in DataProvider.employees)
             {
                 System.Console.WriteLine(emp.ToString());
             }
+            
         }
     }
 }
